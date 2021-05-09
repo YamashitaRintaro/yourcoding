@@ -1,0 +1,1106 @@
+@charset "UTF-8";
+
+/* ========================================
+                複数使用
+ ========================================= */
+.container {
+  margin: 0 auto;
+  max-width: 1022px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1022px;
+}
+
+/* ========================================
+                ヘッダー
+ ========================================= */
+.header {
+  position: relative;
+  position: fixed;
+  height: 94px;
+  width: 100%;
+  top: 0;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header .container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header .container .logo img {
+  width: 46px;
+}
+
+.header .container .logo h1 {
+  margin-left: 16px;
+  font-size: 24px;
+}
+/* 
+.header .container .header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  margin-left: 79px;
+}
+
+.header .container .header-menu li:not(:last-child) {
+  margin-right: 46px;
+} */
+
+
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+.header-nav{
+  margin-right: 184px;
+}
+
+.header-nav li{
+  margin-left: 46px;
+}
+
+
+/*ここから下がハンバーガーメニューのスタイル*/
+@media screen and (min-width: 768px) {
+  .header #navArea {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .header #navArea {
+    display: block;
+  }
+}
+
+.header nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+
+.header .open nav {
+  left: 0;
+  opacity: 1;
+}
+
+.header nav .inner {
+  padding: 25px;
+}
+
+.header nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+.header nav .inner ul img {
+  margin-left: -12px;
+}
+
+.header nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.header .header-container nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+
+@media screen and (max-width: 767px) {
+  .header nav {
+    left: -220px;
+    width: 220px;
+  }
+}
+
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 33px;
+  right: 22px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.header .header-container .open .toggle_btn span {
+  background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+
+.nav-logo{
+  display: flex !important;
+  align-items: center;
+}
+
+.toggle-logo{
+  width: 20px;
+}
+
+.toggle-logo img{
+  width: 100%;
+}
+
+#mask {
+  display: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* .logo {
+  width: 200px;
+  padding: 15px;
+}
+
+.logo img {
+  width: 100%;
+}  */
+
+
+.header-nav  ul{
+  display: flex;
+  margin-left: auto;
+  /* align-items: center; */
+}
+
+@media screen and (max-width:768px) {
+  .header-nav {
+    display: none;
+  }
+}
+
+.nav-menu {
+  padding: 14px 32px;
+}
+
+.header .open .toggle_btn span {
+  background-color: #fff;
+}
+
+
+/* .gnavi_sp-style {
+  display: none;
+  visibility: hidden; 
+}
+
+.gnavi_sp-style.active{
+  opacity: 100;
+  visibility: visible;
+} */
+
+
+.contact-btn {
+  width: 155px;
+  height: 37px;
+  background: linear-gradient(to right, #FA41CC, #6020B0);
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/* ========================================
+                メイン
+ ========================================= */
+
+main {
+  /* max-width: 1366px; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  background-image: url(../img/img/circle.png);
+  background-repeat: no-repeat;
+  background-position: top -30px right -85px;
+}
+
+.main .container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 225px 20px 113px;
+  flex-direction: row-reverse;
+}
+
+
+.main-contents h1 {
+  font-size: 32px;
+  line-height: 46px;
+  max-width: 352px;
+}
+
+.main-contents h2 {
+  font-size: 16px;
+  margin-top: 44px;
+  margin-bottom: 45px;
+  line-height: 27px;
+  max-width: 257px;
+}
+
+
+
+.main-img {
+  max-width: 518px;
+}
+
+.main-img img {
+  width: 100%;
+}
+
+/* ========================================
+                ３つの特徴
+ ========================================= */
+
+#feature-margin {
+  margin-top: -90px;
+  height: 90px;
+}
+
+.main-features {
+  text-align: center;
+  margin-top: 16px;
+}
+
+
+.theme {
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  padding-top: 55px;
+}
+
+
+.sub-theme {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3BA6C9;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.three-features {
+  padding: 0 20px;
+}
+
+
+.three-features h1 {
+  text-align: center;
+  font-size: 28px;
+  line-height: 40px;
+  margin-top: 57px;
+}
+
+
+.three-features h2 {
+  font-size: 24px;
+  line-height: 48px;
+}
+
+
+.three-features h3 {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 45px;
+}
+
+
+.feature:nth-of-type(1) {
+  margin: 49px 0 86px;
+}
+
+
+.feature:nth-of-type(2) {
+  flex-direction: row-reverse;
+  margin: 64px 0 143px;
+}
+
+
+.feature:nth-of-type(3) {
+  margin: 62px 0 156px;
+}
+
+
+
+
+
+/* ========================================
+                価格
+ ========================================= */
+#price-margin {
+  margin-top: -90px;
+  height: 90px;
+}
+
+.price {
+  width: 100%;
+  max-height: 744px;
+  background-color: #EEFBFB;
+}
+
+
+.price h3 {
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  padding-bottom: 66px;
+}
+
+
+.price .wrapper {
+  padding: 64px 48px 36px;
+}
+
+
+.table-bordered {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+
+
+.table-bordered th {
+  padding: 35px 24px 35px 19px;
+  width: 32%;
+  border: 1px solid #E5E5E5;
+  line-height: 28px;
+}
+
+.table-bordered td {
+  padding: 35px 24px 35px 30px;
+  width: 68%;
+  border: 1px solid #E5E5E5;
+}
+
+
+/* ========================================
+            アコーディオン
+ ========================================= */
+
+
+.accordion .wrapper {
+  padding: 0 57px 86px;
+}
+
+
+.ac {
+  margin-top: 32px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.ac dd:first-of-type {
+  display: block;
+}
+
+
+.ac-parent {
+  border: solid 1px #E5E5E5;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+
+.ac-child {
+  padding: 20px 35px;
+  background-color: #F2F2F2;
+  border: solid 1px #E5E5E5;
+  display: none;
+}
+
+/* ========================================
+                ブログ
+ ========================================= */
+#blog-margin {
+  margin-top: -90px;
+  height: 90px;
+}
+
+.blog {
+  max-height: 100%;
+  background-color: #EEFBFB;
+  ;
+}
+
+
+.blog .wrapper {
+  max-width: 100%;
+  padding: 0 55px 91px 55px;
+}
+
+
+.blog-items {
+  box-shadow: 0px 3px 6px #00000029;
+  width: calc(33.333% - 60px / 3);
+  background-color: #FFFFFF;
+}
+
+.blog-items h1 {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 18px 28px 0 18px;
+  min-height: 78px;
+}
+
+.blog-items h2 {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: right;
+  margin: 5px 30px 10px 0;
+}
+
+.blog-items img {
+  width: 100%;
+}
+
+
+
+/* ========================================
+                スライダー
+ ========================================= */
+#work-margin {
+  margin-top: -90px;
+  height: 90px;
+}
+
+.works .wrapper {
+  max-width: 100%;
+}
+
+.swiper-container {
+  margin-top: 68px;
+}
+
+.swiper-slide {
+  max-width: 332px;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+}
+
+.swiper-slide h1 {
+  padding: 22px 18px 0 18px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.swiper-slide p {
+  padding: 34px 18px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-scrollbar {
+  display: none;
+}
+
+
+/* ========================================
+                お問い合わせ
+ ========================================= */
+#contact-margin {
+  height: 90px;
+}
+
+.contact {
+  background: linear-gradient(to right, #05A5FA, #67FFD6);
+}
+
+
+
+.contact .wrapper {
+  padding-bottom: 70px;
+}
+
+
+.contact .theme,
+.contact .sub-theme {
+  color: #FFFFFF;
+}
+
+
+.contact h3 {
+  margin-top: 38px;
+  margin-bottom: 44px;
+}
+
+
+.contact-form {
+  background-color: #FFFFFF;
+  margin: 0 57px;
+}
+
+
+
+.contact-text h1 {
+  display: inline-block;
+
+}
+
+
+.contact-text p {
+  padding: 4px 16px;
+  background-color: #0C449B;
+  border-radius: 10px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  margin-left: 23px;
+}
+
+
+.form-container {
+  padding: 36px 62px;
+}
+
+
+.form {
+  background: #EEFBFB;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.textarea {
+  width: 100%;
+  height: 179px;
+  background: #EEFBFB;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  vertical-align: top;
+  margin-top: 27px;
+  padding: 10px;
+}
+
+
+.checkbox {
+  text-align: center;
+  margin-top: 27px;
+  vertical-align: middle;
+}
+
+
+#check {
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+}
+
+
+.submit-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.end-message {
+  display: none;
+}
+
+.false-message {
+  display: none;
+}
+
+/* 送信可能ボタン 参考資料 https://www.nxworld.net/jquery-switch-disable-input-button.html */
+
+
+/* ========================================
+                フッター
+ ========================================= */
+
+.footer {
+  background-color: #F8F8F8;
+  text-align: center;
+}
+
+.footer h1 {
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.footer h2 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+
+.footer a {
+  display: inline-block;
+  color: #333;
+  margin: 0 10px;
+}
+
+
+.footer h3 {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  margin: 54px 0 50px;
+}
+
+
+
+
+
+/* ========================================
+                900未満
+ ========================================= */
+
+@media(max-width:900px) {
+
+  .menu-list {
+    display: none;
+  }
+
+
+
+  /*メニューボタン　展開前*/
+  .menu-btn {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    top: 25px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu-btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 6px;
+    background: #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-btn span:nth-of-type(1) {
+    top: 10px;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: 20px;
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: 30px;
+  }
+
+  /*メニューボタン　展開後*/
+  .menu-btn.active span:nth-child(1) {
+    top: 16px;
+    left: 6px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn.active span:nth-child(2),
+  .menu-btn.active span:nth-child(3) {
+    top: 16px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /*スマホ用のメニュー*/
+  .gnavi_sp-style {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .gnavi_sp-style ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  .gnavi_sp-style ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+
+  .gnavi_sp-style ul li:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .gnavi_sp-style ul li:hover {
+    background: #ddd;
+  }
+
+  .gnavi_sp-style ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .gnavi_sp-style.active {
+    opacity: 1;
+  }
+
+
+  .header .header-btn {
+    display: none;
+  }
+
+  .price .wrapper {
+    padding-bottom: 15px;
+  }
+
+  .table-bordered th {
+    padding: 35px 36px 35px 19px;
+  }
+
+  /* ================= ヘッダーここまで ===================== */
+
+  .three-features {
+    max-width: 500px;
+  }
+
+
+  .three-features h2 {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-bottom: -34px;
+  }
+
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature img {
+    width: 100%;
+  }
+
+  .one,
+  .two,
+  .three {
+    text-align: left;
+  }
+
+  /* ================= 特徴ここまで ===================== */
+
+  .blog-items {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+
+  .theme {
+    padding-top: 25px;
+  }
+
+  .br {
+    display: none;
+  }
+
+}
+
+/* 900未満ここまで */
+
+
+/* ========================================
+                900以上
+ ========================================= */
+@media(min-width:901px) {
+
+  .feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .coding {
+    max-width: 380px;
+    max-height: 314px;
+    margin-right: 157px;
+  }
+
+
+  .one {
+    max-width: 502px;
+  }
+
+
+  .quality {
+    max-width: 479px;
+    max-height: 329px;
+  }
+
+
+  .two {
+    max-width: 448px;
+    margin-top: -68px;
+  }
+
+  .response {
+    max-width: 400px;
+    max-height: 290px;
+  }
+
+
+  .three {
+    max-width: 350px;
+    margin-right: 87px;
+  }
+
+  /* ================= 特徴ここまで ===================== */
+
+  .blog-contents {
+    display: flex;
+  }
+
+
+  .blog-items {
+    margin: 15px;
+  }
+
+  .swiper-slide {
+    height: 407px;
+  }
+
+  .swiper-slide img {
+    height: 210px;
+  }
+
+
+
+
+}
+
+/* ========================================
+                600未満
+ ========================================= */
+
+@media(max-width:600px) {
+  .main .container {
+    padding: 100px 20px 50px;
+  }
+
+  .theme {
+    font-size: 24px;
+  }
+
+
+
+  .price .wrapper {
+    padding: 10px;
+  }
+
+
+  .price .table-bordered th {
+    padding: 10px;
+  }
+
+  .price .table-bordered td {
+    padding: 20px;
+  }
+
+  /* ================= 価格ここまで ===================== */
+
+  .accordion .wrapper {
+    padding: 0 5px 86px;
+  }
+
+
+  .ac {
+    font-size: 10px;
+  }
+
+  .ac-parent {
+    font-size: 12px;
+  }
+
+  .ac-child {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  /* ================= アコーディオンここまで ===================== */
+
+
+  .blog .wrapper {
+    padding: 0 20px 91px 20px;
+  }
+
+
+  .contact-form {
+    margin: 0 20px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+
+  .contact h3 {
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+
+  footer h1 {
+    /* font-size: 24px; */
+    line-height: 28px;
+    padding-top: 26px;
+    padding-bottom: 24px;
+  }
+
+
+}
+
+/* 600未満ここまで */
+/* ========================================
+                600以上
+ ========================================= */
+
+@media(min-width:600px) {
+  .main .container {
+    display: flex;
+  }
+
+
+
+}
